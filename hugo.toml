@@ -1,82 +1,139 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My website'
-theme = 'typo'
+# 网站基本信息
+baseURL = "https://blog.7wate.com/"         # 请替换为你的实际域名
+languageCode = "zh-cn"
+title = "向阳而生"
+theme = "typo"
+defaultContentLanguage = "zh-cn"
+hasCJKLanguage = true
+enableEmoji = true
+canonifyURLs = true
 
-# Google analytics code
-googleAnalytics = "G-xxxxxxxxx"
+# SEO & 分析
+googleAnalytics = "xxx"                        # 生产环境请填入 G-XXXXXX
+enableRobotsTXT = true
 
+# 构建性能
+timeout = "300s"
+
+# 永久链接结构
+[permalinks]
+  posts = "/posts/:year/:month/:day/:slug/"
+
+# 自定义分类标签
 [taxonomies]
-tag = 'tags'
+  tag = "tags"
+  category = "categories"
+  series = "series"
 
-[params]
-# Meta description
-description = "A Tech Blog"
 
-# Appearance settings
-theme = 'auto'
-colorPalette = 'default'
-hideHeader = false
-
-# Intro on main page, content is markdown
-homeIntroTitle = 'Hi!'
-homeIntroContent = """
-I am an Italian Software Engineer with a strong foundation in computer science and a passion for solving complex problems.
-I am interested in a range of topics, including algorithms, distributed systems, databases, and information retrieval.
-"""
-
-# Collection to display on home
-homeCollectionTitle = 'Posts'
-homeCollection = 'posts'
-
-# Lists parameters
-paginationSize = 100
-listSummaries = true
-listDateFormat = '2 Jan 2006'
-
-# Breadcrumbs
-[params.breadcrumbs]
-enabled = true
-showCurrentPage = true
-home = "Home"
-
-# Social icons
-[[params.social]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/user/"
-
-[[params.social]]
-name = "medium"
-url = "https://medium.com/@user"
-
-[[params.social]]
-name = "github"
-url = "https://github.com/user"
-
-# Main menu pages
+# 菜单设置
 [[params.menu]]
-name = "home"
+name = "首页"
 url = "/"
 
 [[params.menu]]
-name = "posts"
-url = "/posts"
+name = "文辑"
+url = "/posts/"
+
+[[params.menu]]
+name = "片语"
+url = "/memos/"
+newTab = true
+
+[[params.menu]]
+name = "挚友"
+url = "/friend/"
+newTab = true
 
 [[params.menu]]
 name = "about"
-url = "/about"
+url = "/about/"
+newTab = true
 
-# Syntax highlight on code blocks
+# Typo 主题参数
+[params]
+description = "一个喜欢异想天开的家伙 💨"
+theme = "auto"
+colorPalette = "default"
+hideHeader = true
+
+# 首页设置
+homeIntroTitle = "👋👋👋"
+homeIntroContent = """
+一个喜欢异想天开的家伙 💨
+"""
+
+homeCollectionTitle = "文辑"
+homeCollection = "posts"
+
+paginationSize = 7
+listSummaries = false
+listDateFormat = "2 Jan"
+
+# 页脚设置
+showFooter = true
+footerContent = "Your **custom** md `footer`"
+
+# 面包屑导航
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "首页"
+
+# Favicon / Logo / SEO 元数据（可选）
+# params.logo = "/images/logo.png"
+# params.favicon = "/favicon.ico"
+# params.keywords = ["技术博客", "分布式系统", "编程", "数据库"]
+
+# 社交链接
+# [[params.social]]
+# name = "github"
+# url = "https://github.com/yourusername"
+
+# [[params.social]]
+# name = "linkedin"
+# url = "https://www.linkedin.com/in/yourprofile/"
+
+# [[params.social]]
+# name = "medium"
+# url = "https://medium.com/@yourusername"
+
+# Markdown 与高亮设置
 [markup]
-[markup.highlight]
-style = 'algol'
+  [markup.highlight]
+    style = "algol"
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
 
-# Giscus comments
-[params.giscus]
-enable = false
-repo = "user/repo"
-repoid = "repoId"
-category = "General"
-categoryid = "categoryId"
-mapping = "pathname"
-theme = "preferred_color_scheme"
+  [markup.goldmark.renderer]
+    unsafe = false  # 更安全，建议通过短代码插入 HTML，而不是直接 HTML
+
+# 安全设置
+[security]
+  enableInlineShortcodes = true
+
+# 站点地图（SEO）
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+# 隐私与 GDPR
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = false
+    disable = false
+
+# 构建压缩设置
+[minify]
+  minifyOutput = true
+
+# 针对不同构建环境的配置（可选）
+[environment.production]
+  minifyOutput = true
+
+[environment.development]
+  minifyOutput = false
