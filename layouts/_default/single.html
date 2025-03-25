@@ -1,0 +1,150 @@
+{{ define "main" }}
+
+{{/* Breadcrumbs */}}
+
+{{ if not .IsHome }}
+{{ partial "breadcrumbs.html" . }}
+{{ end }}
+
+<div {{ if .Param "autonumber" }} class="autonumber" {{ end }}>
+
+  <div class="single-intro-container">
+
+    {{/* Title and Summary */}}
+
+    <h1 class="single-title">{{ .Title }}</h1>
+    {{ with .Param "summary" }}
+    <p class="single-summary">{{ . | markdownify }}</p>
+    {{ end }}
+
+    {{/* Reading Time */}}
+
+    <p class="single-readtime">
+      {{ with .Date }}
+        {{/* 古风日期转换 */}}
+        {{ $year := .Year }}
+        {{ $heavenlyStems := slice "甲" "乙" "丙" "丁" "戊" "己" "庚" "辛" "壬" "癸" }}
+        {{ $earthlyBranches := slice "子" "丑" "寅" "卯" "辰" "巳" "午" "未" "申" "酉" "戌" "亥" }}
+        {{ $stemIndex := mod (sub $year 4) 10 }}
+        {{ $branchIndex := mod (sub $year 4) 12 }}
+        {{ $yearStr := printf "%s%s年" (index $heavenlyStems $stemIndex) (index $earthlyBranches $branchIndex) }}
+
+        {{/* 月份转换 */}}
+        {{ $monthNum := int .Month }}
+        {{ $monthMap := slice "一月" "二月" "三月" "四月" "五月" "六月" "七月" "八月" "九月" "十月" "十一月" "十二月" }}
+        {{ $monthStr := index $monthMap (sub $monthNum 1) }}
+
+        {{/* 日转换为中文日期（简化版） */}}
+        {{ $day := .Day }}
+        {{ $chineseDigits := slice "零" "一" "二" "三" "四" "五" "六" "七" "八" "九" "十" }}
+        {{ $.Scratch.Set "dayStr" "" }}
+        {{ if le $day 10 }}
+          {{ $.Scratch.Set "dayStr" (printf "初%s" (index $chineseDigits $day)) }}
+        {{ else if le $day 20 }}
+          {{ if eq $day 20 }}
+            {{ $.Scratch.Set "dayStr" "二十" }}
+          {{ else }}
+            {{ $.Scratch.Set "dayStr" (printf "十%s" (index $chineseDigits (sub $day 10))) }}
+          {{ end }}
+        {{ else if lt $day 30 }}
+          {{ $.Scratch.Set "dayStr" (printf "廿%s" (index $chineseDigits (sub $day 20))) }}
+        {{ else if eq $day 30 }}
+          {{ $.Scratch.Set "dayStr" "三十" }}
+        {{ else }}
+          {{ $.Scratch.Set "dayStr" "三十一" }}
+        {{ end }}
+        {{ $dayStr := $.Scratch.Get "dayStr" }}
+
+        {{/* 拼接完整古风日期 */}}
+        {{ $fullDate := printf "%s%s%s日" $yearStr $monthStr $dayStr }}
+        <time datetime="{{ . | time.Format "2006-01-02T15:04:05-07:00" }}">{{ $fullDate }} · </time>
+      {{ end }}
+
+      {{ if or $.Site.Params.readTime (.Param "readTime") }}
+        {{ $rt := .ReadingTime }}
+        {{ if le $rt 5 }}
+          弹指可览
+        {{ else if le $rt 15 }}
+          阅需一刻
+        {{ else if le $rt 30 }}
+          半炷香可读
+        {{ else if le $rt 60 }}
+          移更漏而尽
+        {{ else }}
+          烛烬阅毕
+        {{ end }}
+      {{ end }}
+    </p>
+
+
+
+
+  {{ if .Param "showTags" }}
+
+  {{ $taxonomy := "tags" }}
+  {{ with .Param $taxonomy }}
+
+  <div class="single-tags">
+    {{ range $index, $tag := . }}
+    {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+    <span>
+      <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+    </span>
+    {{ end }}
+    {{ end }}
+  </div>
+
+  {{ end }}
+  {{ end }}
+
+  {{/* Table of Content */}}
+
+  {{ if .Param "toc" }}
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    {{ .TableOfContents }}
+  </aside>
+  {{ end }}
+
+  {{/* Page content */}}
+
+  <div class="single-content">
+    {{ .Content }}
+    {{ if .Site.Params.giscus.enable }}
+    {{ if not .Params.disableComment }}
+    {{ partial "comments.html" . }}
+    {{ end }}
+    {{ end }}
+  </div>
+
+  {{ if .Store.Get "hasMermaid" }}
+  {{ $mermaidDarkTheme := default "dark" (or .Params.mermaidDarkTheme .Site.Params.mermaidDarkTheme) }}
+  {{ $mermaidTheme := default "default" (or .Params.mermaidTheme .Site.Params.mermaidTheme) }}
+  <script defer
+    type="module"
+    id="mermaid_script"
+    data-light-theme="{{ $mermaidTheme }}"
+    data-dark-theme="{{ $mermaidDarkTheme }}"
+    src='{{ "js/mermaid.js" | relURL }}'>
+  </script>
+  {{ end }}
+
+  {{/* Next prev controls */}}
+
+  {{ if not (.Param "hidePagination") }}
+  {{ partial "pagination-single.html" . }}
+  {{ end }}
+
+  {{/* Back to top */}}
+
+  {{ if not (.Param "hideBackToTop") }}
+  <div class="back-to-top">
+    <a href="#top">
+     ◈ 扶摇直上 ◈
+    </a>
+  </div>
+  {{ end }}
+
+</div>
+
+{{ end }}

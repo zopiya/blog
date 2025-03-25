@@ -8,23 +8,18 @@ hasCJKLanguage = true
 enableEmoji = true
 canonifyURLs = true
 
-# SEO & 分析
-googleAnalytics = "xxx"                        # 生产环境请填入 G-XXXXXX
-enableRobotsTXT = true
-
 # 构建性能
 timeout = "300s"
 
 # 永久链接结构
 [permalinks]
-  posts = "/posts/:year/:month/:day/:slug/"
+  posts = ":slug/"
 
 # 自定义分类标签
 [taxonomies]
   tag = "tags"
   category = "categories"
   series = "series"
-
 
 # 菜单设置
 [[params.menu]]
@@ -37,12 +32,7 @@ url = "/posts/"
 
 [[params.menu]]
 name = "片语"
-url = "/memos/"
-newTab = true
-
-[[params.menu]]
-name = "挚友"
-url = "/friend/"
+url = "https://memos.7wate.com/explore"
 newTab = true
 
 [[params.menu]]
@@ -52,27 +42,40 @@ newTab = true
 
 # Typo 主题参数
 [params]
-description = "一个喜欢异想天开的家伙 💨"
+description = "愿我们都能：执着于热爱，纯粹于当下。"
 theme = "auto"
-colorPalette = "default"
-hideHeader = true
+colorPalette = "base16-default"
+# default;
+# catpuccin;
+# gruvebox;
+# eink;
+# base16-default;
+# base16-eighties;
+# base16-ocean;
+# base16-mocha;
+# base16-cupcake.
 
 # 首页设置
 homeIntroTitle = "👋👋👋"
 homeIntroContent = """
-一个喜欢异想天开的家伙 💨
+愿我们都能：执着于热爱，纯粹于当下。
 """
 
+# 文辑设置
 homeCollectionTitle = "文辑"
 homeCollection = "posts"
 
+# 文章设置
+hideHeader = true
+readTime = true
 paginationSize = 7
 listSummaries = false
-listDateFormat = "2 Jan"
+listDateFormat = "2006 Jan"
+homeDateFormat = "2 Jan"
 
 # 页脚设置
 showFooter = true
-footerContent = "Your **custom** md `footer`"
+footerContent = "© 2025 向阳而生"
 
 # 面包屑导航
 [params.breadcrumbs]
@@ -80,34 +83,26 @@ enabled = true
 showCurrentPage = true
 home = "首页"
 
-# Favicon / Logo / SEO 元数据（可选）
-# params.logo = "/images/logo.png"
-# params.favicon = "/favicon.ico"
-# params.keywords = ["技术博客", "分布式系统", "编程", "数据库"]
-
 # 社交链接
-# [[params.social]]
-# name = "github"
-# url = "https://github.com/yourusername"
+[[params.social]]
+name = "github"
+url = "https://github.com/7wate"
 
-# [[params.social]]
-# name = "linkedin"
-# url = "https://www.linkedin.com/in/yourprofile/"
+[[params.social]]
+name = "gmail"
+url = "mailto:zhouzhongping@7wate.com"
 
-# [[params.social]]
-# name = "medium"
-# url = "https://medium.com/@yourusername"
+[[params.social]]
+name = "rss"
+url = "https://blog.7wate.com/feed.xml"
 
 # Markdown 与高亮设置
 [markup]
   [markup.highlight]
     style = "algol"
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
 
   [markup.goldmark.renderer]
-    unsafe = false  # 更安全，建议通过短代码插入 HTML，而不是直接 HTML
+    unsafe = false
 
 # 安全设置
 [security]
@@ -118,6 +113,12 @@ home = "首页"
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
+
+# 网站分析
+[params.umami]
+enable = true
+websiteId = "ce53db0e-af27-4703-ba19-d4792c8cff78"
+jsLocation = "https://umami.7wate.com/script.js"
 
 # 隐私与 GDPR
 [privacy]
@@ -130,10 +131,3 @@ home = "首页"
 # 构建压缩设置
 [minify]
   minifyOutput = true
-
-# 针对不同构建环境的配置（可选）
-[environment.production]
-  minifyOutput = true
-
-[environment.development]
-  minifyOutput = false
