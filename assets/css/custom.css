@@ -1,0 +1,41 @@
+/* 全局样式：优化中文及系统字体显示 */
+body {
+    /* 优先使用自定义中文字体，再按优先级依次使用系统和通用字体。
+       “LXGW WenKai”为自定义中文字体，如未安装则依次回退到主流中文字体及系统字体 */
+    font-family: "LXGW WenKai Screen", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei",
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
+
+    /* 根据设计需求设置基础字号与行高，中文建议行高设置在1.5～1.6之间 */
+    font-size: 18px;
+    line-height: 1.6;
+
+    /* 优化字体平滑显示，提高文字渲染质量 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* 全站链接样式 - hover 显示下划线 */
+a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    background-size: 100% 2px;
+}
+
+/* 可选：代码区或按钮中的链接例外处理 */
+code a,
+button a,
+.navbar a.button {
+    background-image: none !important;
+    text-decoration: none !important;
+}

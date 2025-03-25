@@ -46,7 +46,7 @@ url = "/friend/"
 newTab = true
 
 [[params.menu]]
-name = "about"
+name = "关于"
 url = "/about/"
 newTab = true
 
