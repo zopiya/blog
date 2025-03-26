@@ -1,6 +1,7 @@
 # Hugo 生成的静态站点目录（一般不提交，用于部署）
 /public/
-/content/
+content/posts/[0-9][0-9][0-9][0-9]/
+
 
 # 本地预览时自动生成的资源文件夹
 /resources/_gen/
