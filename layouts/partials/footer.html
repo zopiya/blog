@@ -1,0 +1,10 @@
+{{ $showFooter := default true .Site.Params.showFooter }}
+{{ if $showFooter }}
+    {{ if not .Site.Params.footerContent }}
+    <p>© {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
+    {{ end }}
+    
+    {{ with .Site.Params.footerContent }}
+    <p>{{ . | markdownify }}</p>
+    {{ end }}
+{{ end }}
