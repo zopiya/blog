@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+RSS: {{ .Site.BaseURL }}index.xml
+Sitemap: {{ .Site.BaseURL }}sitemap.xml

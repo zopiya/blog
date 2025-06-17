@@ -23,7 +23,7 @@ layout: "about"
 
 博客不设评论区，短期内也暂无开放计划。
 
-但如果你有什么想说的，欢迎通过邮件联系：[zhouzhongping@7wate.com](mailto:zhouzhongping@7wate.com)
+但如果你有什么想说的，欢迎通过邮件联系：[i@zopiya.com](mailto:i@zopiya.com)
 
 你也可以使用 Delta Chat 与我匿名通信：[点此扫码加好友](https://static.7wate.com/2025/03/26/bf7226c87704f.png)
 

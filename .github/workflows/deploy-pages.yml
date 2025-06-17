@@ -1,0 +1,53 @@
+name: Deploy Hugo to GitHub Pages
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
+
+      - name: Clone private wiki repository
+        run: |
+          rm -rf /tmp/wiki && git clone "${{ secrets.GITEA_REPO_CLONE }}" /tmp/wiki
+          if [ -d "/tmp/wiki/Personal/Blog" ]; then
+            cp -r /tmp/wiki/Personal/Blog/* content/posts/ || exit 1
+          else
+            echo "Wiki content not found"
+            exit 1
+          fi
+
+      - name: Build Hugo site
+        run: hugo --minify
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: zopiya.com
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
