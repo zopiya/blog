@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Project/Redemption on 向阳而生</title><link>/tags/project/redemption/</link><description>Recent content in Project/Redemption on 向阳而生</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Thu, 03 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/project/redemption/rss.xml" rel="self" type="application/rss+xml"/><item><title>首页加载速度优化方案</title><link>/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</link><pubDate>Thu, 03 Nov 2022 00:00:00 +0000</pubDate><guid>/%E9%A6%96%E9%A1%B5%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</guid><description>&lt;p>自己一条龙研发的 Halo 博客主题 &lt;a href="https://blog.7wate.com/?p=85">Redemption&lt;/a> 最近也是发布了首个正式版，在博友 &lt;a href="https://dujun.io/">杜郎俊赏&lt;/a> 提供的 &lt;a href="https://dujun.io/cleancss-remove-unused-css.html">CleanCSS&lt;/a> 工具下麻溜地搞定了，同时又添加了一些自己的想法。主要思路是首页做减法：删减无用代码文件、压缩静态资源体积，同时完全不影响首页的内容展示。&lt;/p></description></item><item><title>Halo 主题 Redemption 首发版</title><link>/halo-%E4%B8%BB%E9%A2%98-redemption-%E9%A6%96%E5%8F%91%E7%89%88/</link><pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate><guid>/halo-%E4%B8%BB%E9%A2%98-redemption-%E9%A6%96%E5%8F%91%E7%89%88/</guid><description>&lt;p>
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class="">
+
+ &lt;div>
+ &lt;img loading="lazy" alt="img" src="https://static.7wate.com/img/2022/11/02/4057d365c897c.png" >
+ &lt;/div>
+
+ 
+&lt;/figure>
+&lt;/p>
+&lt;p>Redemption 一款专注阅读、写作的 &lt;a href="https://halo.run/">Halo 博客&lt;/a> 主题。主要设计思想即是专注阅读、写作，是一款极简类型的博客主题。&lt;/p>
+&lt;p>Redemption 部分设计灵感借鉴 Halo 博客 Zozo 主题，感谢各位前辈的无私开源。特意针对首屏加载进行优化，无需 CDN&lt;strong>首屏 0.7s 内加载完成。全尺寸媒体自适应查询以及自适应深/浅色模式，让你专注写作，不带感情！&lt;/strong>&lt;/p></description></item><item><title>Redemption 主题 0.2.1 版本</title><link>/redemption-%E4%B8%BB%E9%A2%98-0.2.1-%E7%89%88%E6%9C%AC/</link><pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate><guid>/redemption-%E4%B8%BB%E9%A2%98-0.2.1-%E7%89%88%E6%9C%AC/</guid><description>&lt;p>这次 0.2.1 版本是基于博友的发现，简单处理了以下两个问题、并添加适配了文章页 Markdown 渲染 CSS 样式。&lt;/p>
+&lt;p>&lt;a href="https://git.7wate.com/zhouzhongping/Redemption">点击打开 Git 仓库下载主题&lt;/a>&lt;/p>
+&lt;h2 class="heading" id="自适应媒体查询无法正确适配屏幕">
+ 自适应媒体查询无法正确适配屏幕
+ &lt;a class="anchor" href="#%e8%87%aa%e9%80%82%e5%ba%94%e5%aa%92%e4%bd%93%e6%9f%a5%e8%af%a2%e6%97%a0%e6%b3%95%e6%ad%a3%e7%a1%ae%e9%80%82%e9%85%8d%e5%b1%8f%e5%b9%95">#&lt;/a>
+&lt;/h2>
+&lt;p>基于 870px 作为阈值，划分了移动端和桌面端；移动端暂未发现明显问题，未修改 ~&lt;/p></description></item><item><title>Redemption</title><link>/redemption/</link><pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate><guid>/redemption/</guid><description>&lt;p>一款 Halo 博客主题，前前后后增删改了总计近万行；借鉴 halo-theme-zozo 主题样式，自定义了一些特色。也算圆了自己想独立开发一款博客主题的念想……&lt;/p>
+&lt;h2 class="heading" id="redemption">
+ Redemption
+ &lt;a class="anchor" href="#redemption">#&lt;/a>
+&lt;/h2>
+&lt;p>目前支持如下，将来根据需求开发。并不打算做大做强哈哈，再创辉煌 🙄。以阅读为第一要素，所以&lt;strong>并未明显&lt;/strong>提供较现代化功能按钮，丰富了字体、字号的选择（未提供设置选项）。&lt;/p></description></item></channel></rss>

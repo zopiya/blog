@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SoftwareEngineering/Automation on 向阳而生</title><link>/tags/softwareengineering/automation/</link><description>Recent content in SoftwareEngineering/Automation on 向阳而生</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/softwareengineering/automation/rss.xml" rel="self" type="application/rss+xml"/><item><title>浅尝 Gitea 的 Actions</title><link>/%E6%B5%85%E5%B0%9D-gitea-%E7%9A%84-actions/</link><pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate><guid>/%E6%B5%85%E5%B0%9D-gitea-%E7%9A%84-actions/</guid><description>&lt;h2 class="heading" id="前言">
+ 前言
+ &lt;a class="anchor" href="#%e5%89%8d%e8%a8%80">#&lt;/a>
+&lt;/h2>
+&lt;p>Gitea 是一个轻量级的 DevOps 平台软件。从开发计划到产品成型的整个软件生命周期，它都能够高效而轻松地帮助团队和开发者，实现包括 Git 托管、代码审查、团队协作、软件包注册和 CI/CD 等功能。它与 GitHub、Bitbucket 和 GitLab 等 &lt;a href="https://docs.gitea.com/zh-cn/installation/comparison">比较&lt;/a> 类似。&lt;/p></description></item></channel></rss>

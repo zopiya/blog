@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Project/数字文具盒 on 向阳而生</title><link>/tags/project/%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92/</link><description>Recent content in Project/数字文具盒 on 向阳而生</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/project/%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92/rss.xml" rel="self" type="application/rss+xml"/><item><title>Obsidian 使用 Templater 插件的个性化脚本</title><link>/obsidian-%E4%BD%BF%E7%94%A8-templater-%E6%8F%92%E4%BB%B6%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%84%9A%E6%9C%AC/</link><pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate><guid>/obsidian-%E4%BD%BF%E7%94%A8-templater-%E6%8F%92%E4%BB%B6%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%84%9A%E6%9C%AC/</guid><description>&lt;p>Templater 是 Obsidian 的一个模板插件，它定义了一种模板语言，可将变量和函数结果插入到笔记中。它还将允许执行 JavaScript 代码来操作这些变量和函数。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/SilentVoid13/Templater">Templater 仓库&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://silentvoid13.github.io/Templater/">Templater 文档&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Templater 插件允许执行用户个性化脚本，我基于 Templater 利用 ChatGPT 开发完善了三个脚本，简单分享一下，最终实现日志自动获取每日天气，月相，每日诗词开发的三个小脚本，实现效果如下：&lt;/p></description></item><item><title>谈谈我的「数字文具盒」 - 个人工作流</title><link>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-%E4%B8%AA%E4%BA%BA%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate><guid>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-%E4%B8%AA%E4%BA%BA%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><description>&lt;p>谈谈我的「数字文具盒」系列是我一直不断打磨的个人生产力工具经验分享贴。尽管前期有些折腾，可实际用起来却是嘎嘎好用。数字文具盒一贯宗旨&lt;strong>倡导以结果为导向，切勿盲目折腾，适合自己的才是最好的。&lt;/strong>&lt;/p></description></item><item><title>Docusaurus 搭建</title><link>/docusaurus-%E6%90%AD%E5%BB%BA/</link><pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate><guid>/docusaurus-%E6%90%AD%E5%BB%BA/</guid><description>&lt;p>Docusaurus 是一款&lt;strong>静态站点生成器&lt;/strong>。 可以搭建带有快速客户端导航的&lt;strong>单页应用&lt;/strong>，充分利用了 &lt;strong>React&lt;/strong>，让你的网站具有交互能力。 它提供了开箱即用的&lt;strong>文档功能&lt;/strong>，不过也可用于搭建&lt;strong>各种网站&lt;/strong>：个人网站、产品、博客、营销主页等等。&lt;/p></description></item><item><title>谈谈我的「数字文具盒」 - NextCloud</title><link>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-nextcloud/</link><pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate><guid>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-nextcloud/</guid><description>&lt;p>接下来两篇主要谈论 Nextcloud 和 Obsidian，因为篇幅较长，所以单出罗列出来。本文主要介绍 Nextcloud 以及使用中的技巧和心得体会。&lt;/p>
+&lt;h2 class="heading" id="nextcloud">
+ Nextcloud
+ &lt;a class="anchor" href="#nextcloud">#&lt;/a>
+&lt;/h2>
+&lt;p>Nextcloud 是一套用于创建网络硬盘的客户端－服务器软件。其功能与 Dropbox 相近，但 Nextcloud 是自由及开放源代码软件，每个人都可以在私人服务器上安装并执行它。&lt;/p></description></item><item><title>谈谈我的「数字文具盒」 - Obsidian</title><link>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-obsidian/</link><pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate><guid>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-obsidian/</guid><description>&lt;p>这篇关于 Obsidian 是生产力工具的终篇了，因为目前涉及 Obsidian 的文章特别多，所以我就不啰里啰唆叙述重复的文字了。本文主要涉及到 Obsidian 和 Docusaurus 如何进行有机的结合。&lt;/p>
+&lt;h2 class="heading" id="obsidian">
+ Obsidian
+ &lt;a class="anchor" href="#obsidian">#&lt;/a>
+&lt;/h2>
+&lt;p>
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure class="">
+
+ &lt;div>
+ &lt;img loading="lazy" alt="screenshot-1.0-hero-combo" src="https://static.7wate.com/img/2022/11/30/02c7a7cf1ab33.png" >
+ &lt;/div>
+
+ 
+&lt;/figure>
+&lt;/p></description></item><item><title>谈谈我的「数字文具盒」 - 生产力工具（下）</title><link>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E5%85%B7%E4%B8%8B/</link><pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate><guid>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E5%85%B7%E4%B8%8B/</guid><description>&lt;p>下文接着生产力工具继续说起，主要涉及到一些非常好用、事半功倍的工具！&lt;/p>
+&lt;h2 class="heading" id="思维脑图">
+ 思维脑图
+ &lt;a class="anchor" href="#%e6%80%9d%e7%bb%b4%e8%84%91%e5%9b%be">#&lt;/a>
+&lt;/h2>
+&lt;p>思维导图（mind map）是一种用图像整理信息的图解。它用一个中央关键词或想法以辐射线形连接所有的代表字词、想法、任务或其它关联项目。它可以利用不同的方式去表现人们的想法，如引题式、可见形象化式、建构系统式和分类式。它普遍地用作在研究、组织、解决问题和政策制定中。&lt;/p></description></item><item><title>谈谈我的「数字文具盒」 - 心得体会</title><link>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</link><pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate><guid>/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E6%96%87%E5%85%B7%E7%9B%92-%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/</guid><description>&lt;p>谈谈我的「数字文具盒」系列文章更多的是作为指南针，总的来说并不全面也不包含具体的操作细节，我的「数字文具盒」核心指导思想：适合自己的才是最好的、数据自主权、提高效率切勿折腾。&lt;/p></description></item></channel></rss>

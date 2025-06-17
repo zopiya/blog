@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+RSS: /index.xml
+Sitemap: /sitemap.xml
